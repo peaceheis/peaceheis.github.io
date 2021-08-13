@@ -5,7 +5,7 @@
         <style>
             body {
                 background: rgb(125, 198, 205);
-                color: rgb(45, 45, 45);
+                color: rgba(253, 253, 253, 0.979);
                 padding: 10px;
                 font-family: arial;
             }
@@ -16,10 +16,12 @@
         
             /* navigation menu */
             nav {
-                background: rgb(239, 80, 41);
+                background: rgb(252, 117, 84);
                 margin: 0 auto;
+                margin-bottom: 20px;
                 display: flex;
                 padding: 10px;
+                border-radius: 10px;
             }
             h1 {
                 display: flex;
@@ -42,7 +44,7 @@
         
             /* main container area beneath menu */
             main {
-                background: rgb(245, 238, 219);
+                background: rgb(149, 170, 240);
                 display: flex;
             }
             .sidebar {
@@ -57,8 +59,8 @@
                 padding: 15px;
             }
             #interests {
-                border: 4px silver ridge;
-                padding: 8px;
+                border: 3px silver ridge;
+                padding: 4px;
             }
             h2, h3 {
                 margin: 0px;
@@ -68,29 +70,30 @@
 
     <body>
         <!--All Content-->
-        <div>
+        <div id="all-contents">
             <nav>
                 <h1>Shalom's Wonderful Website</h1>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
+                    <ul id="nav-ul">
+                        <li class="nav-li"><a href="index.html">Home</a></li>
+                        <li class="nav-li"><a href="portfolio.html">Portfolio</a></li>
                     </ul>
             </nav>
             <main>
                 <!--Sidebar-->
-                <div>
-                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.TFMNpV-fnzX6FIqQ3nPxswHaEy%26pid%3DApi&f=1">
+                <div class="sidebar">
+                    <img class="sidebar-img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.TFMNpV-fnzX6FIqQ3nPxswHaEy%26pid%3DApi&f=1">
                 </div>
 
                 <!--Main Content-->
-                <div>
+                <div class="content">
                     <h2>Shalom Akolatse</h2>
                     <p>Student at Belle Chasse High.</p>
 
                     <!--Interests-->
-                    <div>
+                    <div id="interests">
                         <ul>
                             <li>Coding</li>
+                            <li>Minecrafting</li>
                             <li>Music-Making</li>
                             <li>Art</li>
                         </ul>
