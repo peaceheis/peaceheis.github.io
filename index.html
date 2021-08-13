@@ -4,7 +4,7 @@
         <title>Shalom's Wonderful Website!</title>
         <style>
             body {
-                background: rgb(125, 198, 205);
+                background: rgb(247, 251, 252);
                 color: rgba(253, 253, 253, 0.979);
                 padding: 10px;
                 font-family: arial;
@@ -44,8 +44,9 @@
         
             /* main container area beneath menu */
             main {
-                background: rgb(149, 170, 240);
+                background: rgba(149, 170, 240, 0.589);
                 display: flex;
+                height: 350px;
             }
             .sidebar {
                 margin-right: 25px;
@@ -61,6 +62,10 @@
             #interests {
                 border: 3px silver ridge;
                 padding: 4px;
+                color:rgba(252, 118, 84, 0.904)
+            }
+            #name {
+                color:rgb(12, 49, 112)
             }
             h2, h3 {
                 margin: 0px;
@@ -86,11 +91,12 @@
 
                 <!--Main Content-->
                 <div class="content">
-                    <h2>Shalom Akolatse</h2>
+                    <h2 id="name">Shalom Akolatse</h2>
                     <p>Student at Belle Chasse High.</p>
 
                     <!--Interests-->
                     <div id="interests">
+                        <p>Interests:</p>
                         <ul>
                             <li>Coding</li>
                             <li>Minecrafting</li>
