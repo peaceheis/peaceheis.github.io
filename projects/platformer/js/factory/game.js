@@ -30,8 +30,8 @@
         
         // create namespace on the game //
         game.opspark = {};
-        game.opspark.init = function() {
-            game.stage.backgroundColor = "#FFFFFF";
+        game.opspafrk.init = function() {
+            game.stage.backgroundColor = "#000000";
             game.physics.startSystem(Phaser.Physics.ARCADE);
             game.physics.arcade.TILE_BIAS = 2;
         };
