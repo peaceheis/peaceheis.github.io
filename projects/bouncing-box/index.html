@@ -41,7 +41,7 @@
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
 
 			// Every 50 milliseconds, call the update Function (see below)
-			setInterval(update, 50);
+			setInterval(update, 25);
 			
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
 			box.on('click', handleBoxClick);
@@ -62,15 +62,29 @@
 			
 			// TODO 2 - Variable declarations 
 			
-
-			
+			var pos = 0;
+			var speed = 10;
+			var backwards = false;
+			var points = 0;
+			moveBoxTo(pos);
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
 			function update() {
-				
+				if (pos >= 1000) {
+					backwards = true;
+				} else if (pos <= 0) {
+					backwards = false;
+				}
+				if(backwards) {
+					pos -= speed;
+				}
+				else {
+					pos += speed;
+				}
+				moveBoxTo(pos);
 
 			};
 
@@ -80,7 +94,9 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
+				points += 1;
+				speed *= 1.2;
+				changeBoxText(points);
 
 
 			};
