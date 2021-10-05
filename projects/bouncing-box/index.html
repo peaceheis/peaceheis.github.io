@@ -62,7 +62,7 @@
 			
 			// TODO 2 - Variable declarations 
 			
-			var pos = 0;
+			var pos = Math.floor(Math.random() * boardWidth);
 			var speed = 10;
 			var backwards = false;
 			var points = 0;
@@ -94,7 +94,11 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				points += 1;
+				if (pos <= boardWidth/2 ){ 
+					points += 1; }
+				else {
+					points -= 1;
+				}
 				speed *= 1.2;
 				changeBoxText(points);
 
