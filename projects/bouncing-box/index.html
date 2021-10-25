@@ -8,25 +8,29 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
 			font-size: 300%;
 			text-align: center;
 			display: block;
 			position: absolute;
 			top: 100px;
+			background-image: url('good-ajr-copy.png');
+			/*background-image: */
 			left: 0px;  /* <--- Change me! */
 		}
 		.board{
-			height: 100vh;
+			background-image: url('https://thehoneypop.com/wp-content/uploads/2021/04/Untitled-design-16.png');
+			background-image: url('neo.jpg');
+			background-image: url('CLICK.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
 </head>
-<body class="board">
+<body class="board" onload = "setup()">
 	<!-- HTML for the box -->
 	<div class="box">?</div>
-
 	<script>
 		(function(){
 			'use strict'
@@ -101,6 +105,7 @@
 				}
 				speed *= 1.2;
 				changeBoxText(points);
+				pos = Math.floor(Math.random() * boardWidth);
 
 
 			};
