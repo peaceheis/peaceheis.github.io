@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Bouncing Box</title>
 	<script src="jquery.min.js"></script>
+	<script src="script.js"></script>
 	<style>
 		.box {
 			width: 70px;
@@ -18,17 +19,16 @@
 			left: 0px;  /* <--- Change me! */
 		}
 		.board{
-			background-image: url('https://thehoneypop.com/wp-content/uploads/2021/04/Untitled-design-16.png');
-			background-image: url('neo.jpg');
-			background-image: url('CLICK.jpg');
 			background-repeat: no-repeat;
 			background-size: cover;
+			background-image: url(neo.jpg);
+			transition: all 1.5s linear;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
 </head>
-<body class="board" onload = "setup()">
+<body class="board" onload = "setupArt()">
 	<!-- HTML for the box -->
 	<div class="box">?</div>
 	<script>

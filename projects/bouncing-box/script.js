@@ -1,6 +1,6 @@
 var counter = 0;
 var albums = ['url(neo.jpg)', 'url(oko.jpg)', 'url(CLICK.jpg)']
-function setup() {
+function setupArt() {
     setInterval(changeArt, 2000);
     }
 
@@ -10,7 +10,7 @@ function changeArt() {
     for(var a=[], i=list.length; i;) {
         a[--i]=list[i];
     }
-    a.forEach(element => element.style.background-image=albums[counter]);
+    a.forEach(element => element.style.backgroundImage=albums[counter]);
     
 
     
