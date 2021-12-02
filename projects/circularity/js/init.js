@@ -8,6 +8,7 @@ var init = function (window) {
         canvas = app.canvas, 
         view = app.view,
         fps = draw.fps('#000');
+        numCircles = Number(prompt("How many circles should be drawn to the screen?"))
         
     
     window.opspark.makeGame = function() {
@@ -32,7 +33,7 @@ var init = function (window) {
         }
 
         // TODO 3 / 8 : Call the drawCircle() function 
-        for(var i=0;i<5;i++){drawCircle();}
+        for(var i=0;i<numCircles;i++){drawCircle();}
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
@@ -45,10 +46,10 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            for(var i=0;i<circles.length;i++){physikz.updatePosition(circle)}
+            for(var i=0;i<circles.length;i++){physikz.updatePosition(circle[i])}
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-           for(var i=0;i<circles.length;i++){game.checkCirclePosition(cirlces[i])}
+           for(var i=0;i<circles.length;i++){game.checkCirclePosition(circles[i])}
 
             // TODO 9 : Iterate over the array
            
@@ -61,10 +62,23 @@ var init = function (window) {
         it to the opposite side of the screen.
         */
         game.checkCirclePosition = function(circle) {
-
+            var leftEdge = circle.x-radius; var rightEdge = circle.x+radius;
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
-            if ( circle.x > canvas.width ) {
+            if ( rightEdge > canvas.width ) {
                 circle.x = 0;
+            }
+            //if past left, set to right
+            else if (leftEdge < 0) {
+                circle.x = canvas.width;
+            }
+            var bottomEdge = circle.x-radius; var topEdge = circle.x+radius
+            //if past top, set to bottom
+            if (topEdge > canvas.height) {
+                circle.y = 0;
+            } 
+            //if past bottom, set to top
+            else if(bottomEdge < 0) { 
+                circle.y = canvas.height
             }
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
