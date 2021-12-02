@@ -37,7 +37,7 @@ function initializeClasses() {
     let isAP = (tempAP === "yes") ? true : false;
     if (isAP) { 
     	specialDesignations.push("AP");
-      document.write("<p>" + classnames[i] + " is an AP class" + "</p>")
+      document.write("<h3>" + classnames[i] + " is an AP class" + "</p>")
     } else { 
     	let tempHnrs = prompt("If " + classnames[i] + " is an Honors class, say 'yes', otherwise type anything besides 'yes'.").toLowerCase();
       let isHnrs = (tempHnrs === "yes") ? true : false;
@@ -94,7 +94,7 @@ function getLetterGradeKey(num) {
 function getLetterGrades() {
 	for (var i = 0; i <= 3; i++) {
   	grade = getLetterGradeKey(Math.round(averages[i]));
-    document.write("<p>" + "You have a " + letterGrades[grade] + " in " + classnames[i] + "</p>");
+    document.write("<h2>" + "You have a " + letterGrades[grade] + " in " + classnames[i] + "</h2>");
     classGrades.push(grade);
   }
 }
